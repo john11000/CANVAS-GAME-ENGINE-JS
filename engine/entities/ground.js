@@ -1,12 +1,8 @@
-export class Ground {
+import { Component } from './components.js'
+export class Ground extends Component {
     
     constructor(x, y, width, height, color, ctx, id) {
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-        this.color = color;
-        this.ctx = ctx;
+        super(x, y, width, height, color, ctx);
         this.id = id;
     }
 
