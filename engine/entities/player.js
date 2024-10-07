@@ -1,6 +1,8 @@
 import { Component } from "./components.js";
 
 export class Player extends Component {
+    canJump = false;
+
     constructor(x, y, width, height, color, ctx, name = "John") {
         super(x, y, width, height, color, ctx);
         this.speed = 4;
@@ -29,7 +31,9 @@ export class Player extends Component {
     }
 
     jump() {
-        this.y -= 20;
+        if (this.canJump) {
+            this.y -= 20;
+        } 
     }
 
     initEventListeners() {

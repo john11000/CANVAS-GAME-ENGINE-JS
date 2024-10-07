@@ -13,8 +13,13 @@ export class Engine {
         this.physics = new Physics(this.width, this.height - 20);
     }
 
+    updatePhysicsElements() {
+        this.physics.addPhysicsElements(this.physicsElement);
+    }
+
     AddPhysics(element) {
         this.physicsElement.push(element);
+        this.updatePhysicsElements();
     }
 
     addElement(element) { 
